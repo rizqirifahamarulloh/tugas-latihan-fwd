@@ -1,0 +1,188 @@
+/* =============================================
+   CSS EKSTERNAL
+   ============================================= */
+
+/* ---- GLOBAL ---- */
+* {
+    box-sizing: border-box;
+}
+
+/* ---- HOME PAGE ---- */
+body.home {
+    background: linear-gradient(135deg, #eee5ff 0%, #d6e4ff 100%);
+    color: darkslategray;
+    text-align: center;
+    margin: 50px;
+    font-family: Arial, sans-serif;
+}
+
+body.home .profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+body.home p {
+    text-align: justify;
+}
+
+/* ---- HEADER PAGE ---- */
+body.header {
+    background: linear-gradient(180deg, #5b4da7 0%, #667eea 100%);
+    margin: 0;
+    padding: 0;
+}
+
+body.header img {
+    width: 100%;
+    height: 250px;
+    display: block;
+}
+
+/* ---- NAV PAGE ---- */
+body.nav {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    text-align: center;
+}
+
+body.nav .nav-links {
+    font-size: 20px;
+}
+
+body.nav .nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+body.nav .nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* ---- FOOTER PAGE ---- */
+body.footer {
+    background: linear-gradient(180deg, #764ba2 0%, #5b4da7 100%);
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    text-align: center;
+}
+
+body.footer .footer-text {
+    color: white;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+/* ---- GALLERY PAGE ---- */
+body.gallery {
+    background: linear-gradient(135deg, #eee5ff 0%, #d6e4ff 100%);
+    margin: 0;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}
+
+body.gallery h2 {
+    text-align: center;
+}
+
+body.gallery marquee img {
+    width: 250px;
+    height: 300px;
+}
+
+/* ---- SIDEBAR (LEFT & RIGHT) ---- */
+body.sidebar {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+.card-glass {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.card-glass + .card-glass {
+    margin-top: 20px;
+}
+
+body.sidebar fieldset {
+    border: none;
+    margin: 0;
+}
+
+body.sidebar legend {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+body.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+body.sidebar li {
+    margin-bottom: 10px;
+}
+
+body.sidebar a {
+    display: block;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+body.sidebar a:hover {
+    background: rgba(197, 197, 197, 0.3);
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0, 128, 128, 0.2);
+}
+
+/* ---- STUDY PAGE ---- */
+body.study {
+    background: linear-gradient(135deg, #eee5ff 0%, #d6e4ff 100%);
+    color: darkslategray;
+    margin: 0;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}
+
+body.study h2 {
+    text-align: center;
+}
+
+body.study table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid steelblue;
+}
+
+body.study th,
+body.study td {
+    border: 1px solid steelblue;
+    padding: 10px;
+}
+
+body.study th {
+    background-color: steelblue;
+    color: white;
+}
