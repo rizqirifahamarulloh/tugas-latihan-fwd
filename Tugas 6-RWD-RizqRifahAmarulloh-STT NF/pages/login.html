@@ -1,0 +1,112 @@
+<!-- ========== Login Page ========== -->
+<div class="container-fluid px-0">
+  <div class="row justify-content-center">
+    <div class="col-lg-8 col-xl-6">
+      <div class="card login-card">
+        <!-- Card Header -->
+        <div class="card-header">
+          <i class="bi bi-shield-lock fs-1 d-block mb-2"></i>
+          <h4 class="mb-1 fw-bold">Login</h4>
+          <p class="mb-0 opacity-75 small">Masuk ke akun Anda untuk melanjutkan</p>
+        </div>
+
+        <!-- Card Body -->
+        <div class="card-body p-4">
+          <form id="loginForm" onsubmit="return handleLogin(event)">
+            <!-- Email -->
+            <div class="mb-3">
+              <label for="loginEmail" class="form-label fw-semibold">
+                <i class="bi bi-envelope me-1"></i>Alamat Email
+              </label>
+              <input type="email" class="form-control form-control-lg" id="loginEmail"
+                     placeholder="nama@email.com" required>
+              <div class="invalid-feedback">Masukkan alamat email yang valid.</div>
+            </div>
+
+            <!-- Password -->
+            <div class="mb-3">
+              <label for="loginPassword" class="form-label fw-semibold">
+                <i class="bi bi-key me-1"></i>Password
+              </label>
+              <div class="input-group">
+                <input type="password" class="form-control form-control-lg" id="loginPassword"
+                       placeholder="Masukkan password" required minlength="6">
+                <button class="btn btn-outline-secondary" type="button" onclick="togglePassword()">
+                  <i class="bi bi-eye" id="togglePwdIcon"></i>
+                </button>
+              </div>
+              <div class="form-text">Minimal 6 karakter</div>
+            </div>
+
+            <!-- Remember Me & Forgot -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="rememberMe">
+                <label class="form-check-label small" for="rememberMe">Ingat saya</label>
+              </div>
+              <a href="#" class="small text-decoration-none">Lupa password?</a>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary btn-lg w-100 mb-3">
+              <i class="bi bi-box-arrow-in-right me-1"></i>Masuk
+            </button>
+
+            <!-- Divider -->
+            <div class="text-center my-3">
+              <span class="text-muted small">atau masuk dengan</span>
+            </div>
+
+            <!-- Social Login -->
+            <div class="d-flex gap-2">
+              <button type="button" class="btn btn-outline-danger flex-fill">
+                <i class="bi bi-google me-1"></i>Google
+              </button>
+              <button type="button" class="btn btn-outline-primary flex-fill">
+                <i class="bi bi-facebook me-1"></i>Facebook
+              </button>
+              <button type="button" class="btn btn-outline-dark flex-fill">
+                <i class="bi bi-github me-1"></i>GitHub
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Card Footer -->
+        <div class="card-footer text-center bg-light py-3">
+          <small class="text-muted">Belum punya akun? <a href="#" class="text-decoration-none fw-semibold">Daftar sekarang</a></small>
+        </div>
+      </div>
+
+      <!-- Alert placeholder -->
+      <div id="loginAlert" class="mt-3"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function togglePassword() {
+    const pwd = document.getElementById('loginPassword');
+    const icon = document.getElementById('togglePwdIcon');
+    if (pwd.type === 'password') {
+      pwd.type = 'text';
+      icon.classList.replace('bi-eye', 'bi-eye-slash');
+    } else {
+      pwd.type = 'password';
+      icon.classList.replace('bi-eye-slash', 'bi-eye');
+    }
+  }
+
+  function handleLogin(e) {
+    e.preventDefault();
+    const email = document.getElementById('loginEmail').value;
+    const alertBox = document.getElementById('loginAlert');
+    alertBox.innerHTML = `
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <i class="bi bi-check-circle me-1"></i>
+        Login berhasil! Selamat datang, <strong>${email}</strong>.
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+      </div>`;
+    return false;
+  }
+</script>

@@ -1,0 +1,243 @@
+/* ============================================
+   Custom Styles - RWD Project
+   Rizqi Rifah Amarulloh - STT Terpadu Nurul Fikri
+   ============================================ */
+
+/* ---------- General ---------- */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ---------- Navbar ---------- */
+.navbar-brand img {
+  height: 36px;
+  margin-right: 8px;
+}
+
+.navbar {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.navbar .nav-link {
+  font-weight: 500;
+  padding: 0.5rem 1rem !important;
+  transition: color 0.2s;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #0d6efd !important;
+}
+
+/* ---------- Carousel / Header ---------- */
+#headerArea .carousel-item img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  #headerArea .carousel-item img {
+    height: 200px;
+  }
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 8px;
+  padding: 12px 20px;
+}
+
+/* ---------- Sidebar ---------- */
+#sidebarArea {
+  min-height: 100%;
+}
+
+#sidebarArea .card {
+  border: none;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+}
+
+#sidebarArea .list-group-item {
+  border: none;
+  padding: 10px 16px;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+
+#sidebarArea .list-group-item:hover {
+  background-color: #e9ecef;
+}
+
+#sidebarArea .list-group-item i {
+  width: 20px;
+  text-align: center;
+  margin-right: 8px;
+  color: #0d6efd;
+}
+
+/* ---------- Main Content ---------- */
+#mainContent {
+  min-height: 400px;
+}
+
+/* ---------- Profile Card (Home) ---------- */
+.profile-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.profile-card img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border: 4px solid #fff;
+}
+
+.profile-card .badge {
+  font-size: 0.85rem;
+}
+
+/* ---------- Study Table ---------- */
+.study-table thead {
+  background-color: #0d6efd;
+  color: #fff;
+}
+
+.study-table th,
+.study-table td {
+  vertical-align: middle;
+}
+
+/* ---------- Gallery ---------- */
+.gallery-item {
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-item .card-body {
+  padding: 12px 16px;
+}
+
+/* ---------- DataTable ---------- */
+.datatable-section .table {
+  font-size: 0.95rem;
+}
+
+.datatable-section thead {
+  background-color: #198754;
+  color: #fff;
+}
+
+/* ---------- Login Card ---------- */
+.login-card {
+  max-width: 440px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.login-card .card-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  text-align: center;
+  border-radius: 16px 16px 0 0 !important;
+  padding: 24px;
+}
+
+.login-card .btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  padding: 10px;
+  font-weight: 600;
+}
+
+.login-card .btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* ---------- Footer ---------- */
+#footerArea {
+  background-color: #212529;
+  color: #adb5bd;
+}
+
+#footerArea a {
+  color: #adb5bd;
+  transition: color 0.2s;
+}
+
+#footerArea a:hover {
+  color: #fff;
+}
+
+#footerArea .social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 0 4px;
+  font-size: 1.1rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+#footerArea .social-icons a:hover {
+  background-color: #0d6efd;
+  color: #fff;
+}
+
+/* ---------- Utilities ---------- */
+.section-title {
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+}
+
+/* ---------- Responsive Tweaks ---------- */
+@media (max-width: 991.98px) {
+  #sidebarArea {
+    margin-bottom: 1.5rem;
+  }
+}
